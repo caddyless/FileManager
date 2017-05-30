@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:caddyless="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <com.syslab.caddyless.filemanager.view.SlidingMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/slidingMenu"
+        caddyless:alignLeft="false"
+        caddyless:padding="170dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pink">
 
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/phone" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/icon">
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="1 minute ago   "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/fileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/time"
+                        android:layout_toRightOf="@+id/time"
+                        android:text="by:Mike|Creative Mints"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:id="@+id/appName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/time"
+                        android:text="Mechanical Grasshopper"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/item_menu" />
+        </LinearLayout>
+    </com.syslab.caddyless.filemanager.view.SlidingMenu>
 </RelativeLayout>

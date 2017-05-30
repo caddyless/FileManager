@@ -1,18 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.syslab.caddyless.filemanager.MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:caddyless="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+    <com.syslab.caddyless.filemanager.view.SlidingMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        caddyless:padding="100dp"
+        caddyless:alignLeft="true"
+        caddyless:hide="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <include layout="@layout/left_menu" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:translationZ="0dp"
+                android:paddingTop="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitXY"
+                            android:id="@+id/main_edit"
+                            android:paddingLeft="20dp"
+                            android:src="@mipmap/pen"
+                            android:background="@color/trasparent"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/loveheart"
+                            android:background="@color/trasparent"
+                            android:scaleType="fitXY"
+                            android:layout_toLeftOf="@+id/appname"
+                            android:layout_centerVertical="true"/>
+                        <TextView
+                            android:id="@+id/appname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/app_name"
+                            android:textSize="25dp"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="20dp"
+                        >
+                        <ImageButton
+                            android:background="@color/trasparent"
+                            android:id="@+id/music"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/music"
+                            android:scaleType="fitXY" />
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/music"
+                            android:gravity="center"
+                            android:id="@+id/music_text"
+                            android:layout_below="@+id/music" />
+                        <ImageButton
+                            android:background="@color/trasparent"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/video"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/video"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/video_text"
+                            android:layout_below="@+id/music" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/picture"
+                            android:scaleType="fitXY"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/trasparent"
+                            android:id="@+id/picture"/>
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/picture"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:id="@+id/picture_text"
+                            android:layout_below="@+id/music" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/book"
+                            android:scaleType="fitXY"
+                            android:id="@+id/book"/>
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/book"
+                            android:gravity="center"
+                            android:id="@+id/book_text"
+                            android:layout_below="@+id/book" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/zip"
+                            android:scaleType="fitXY"
+                            android:id="@+id/zip"/>
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zip"
+                            android:gravity="center"
+                            android:id="@+id/zip_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/zip" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/setup"
+                            android:scaleType="fitXY"
+                            android:id="@+id/setup"/>
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setup"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/setup_text"
+                            android:layout_below="@+id/setup" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:src="@mipmap/download"
+                            android:layout_above="@+id/text1"
+                            android:scaleType="fitXY"
+                            android:id="@+id/download" />
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/download"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:src="@mipmap/recent"
+                            android:layout_above="@+id/text2"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:id="@+id/recent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/text2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/recent"
+                            android:gravity="center" />
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@color/trasparent"
+                            android:layout_above="@+id/text3"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/app"
+                            android:scaleType="fitXY"
+                            android:id="@+id/app"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/text3"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/recycler_view">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.syslab.caddyless.filemanager.view.SlidingMenu>
+</RelativeLayout>

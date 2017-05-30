@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/right_menu"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deepBule">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="#3399FF"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:background="@color/trasparent"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/eye"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/menu_eye"
+            android:layout_centerVertical="true"/>
+        <ImageButton
+            android:background="@color/trasparent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/heart"
+            android:id="@+id/menu_heart"
+            android:layout_centerInParent="true"/>
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/menu_trash"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/trasparent"
+            android:scaleType="fitXY"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/delete_trash" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="padding" format="dimension">
+    </attr>
+    <attr name="alignLeft" format="boolean">
+    </attr>
+    <attr name="hide" format="boolean">
+    </attr>
+    <declare-styleable name="SlidingMenu">
+        <attr name="padding"/>
+        <attr name="alignLeft"/>
+        <attr name="hide"/>
+    </declare-styleable>
 </resources>

@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/folder"
+        android:id="@+id/file_bitmap"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FileName"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/file_name"
+            android:maxLines="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/file_name"
+            android:text="包含文件数量"
+            android:textSize="10sp"
+            android:id="@+id/fileNumber"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fileNumber"
+            android:text="|"
+            android:layout_alignBottom="@+id/fileNumber"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/fengefu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fengefu"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/fengefu"
+            android:text="2017/5/1 14:23"
+            android:textSize="10sp"
+            android:id="@+id/file_date"/>
+    </RelativeLayout>
 
 </LinearLayout>
